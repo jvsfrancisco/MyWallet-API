@@ -82,7 +82,7 @@ app.post("/sign-up", async (req, res) => {
   } catch (error) {
     res.sendStatus(500);
   }
-
+});
 
 
 app.listen(5000, () => {
