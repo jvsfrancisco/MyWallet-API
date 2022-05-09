@@ -4,9 +4,9 @@ import {
     getData,
     sendData,
 } from "./../controllers/Data.js";
-import { validate } from "../middlewares/validate.js";
-import { registerSc } from "../schemas/schemas.js";
-import { validateToken } from "../middlewares/validateToken.js";
+import { validate } from "./../middlewares/validate.js";
+import { registerSc } from "./../Schemas/Schemas.js";
+import { validateToken } from "./../middlewares/validateToken.js";
 
 const financesRouter = Router();
 
