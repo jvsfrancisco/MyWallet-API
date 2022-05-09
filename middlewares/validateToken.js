@@ -1,6 +1,6 @@
 import db from "./../db.js";
 
-export async function validate(req, res, next) {
+export async function validateToken(req, res, next) {
     const { authorization } = req.headers;
     const token = authorization?.replace("Bearer ", "");
 
