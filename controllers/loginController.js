@@ -29,7 +29,7 @@ export async function signIn (req, res) {
   };
   
 export async function signUp (req, res)  {
-    const {email, password} = req.body;
+    const {email, password, name} = req.body;
 
     try {
       const user = await db.collection("users").findOne({email});
@@ -39,6 +39,7 @@ export async function signUp (req, res)  {
       }
       const hash = bcrypt.hashSync(password, 10);
       await db.collection("users").insertOne({
+        name,
         email,
         password: hash,
         registry: [] 

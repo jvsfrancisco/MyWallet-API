@@ -12,10 +12,10 @@ const financesRouter = Router();
 
 financesRouter.use(validateToken);
 
-financesRouter.get("/finance", getData);
+financesRouter.get("/finances", getData);
 
 financesRouter.post(
-    "/finance",
+    "/finances",
     (req, res, next) => {
         validate(req, res, next, registerSc);
     },

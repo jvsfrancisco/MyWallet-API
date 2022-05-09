@@ -4,12 +4,13 @@ import db from "./../db.js";
 
 export async function getData(req, res) {
     const user = res.locals.user;
-
+    
     delete user.password;
     delete user._id;
     delete user.email;
 
     res.send(user);
+    console.log(res.locals)
 }
 
 export async function sendData(req, res) {
