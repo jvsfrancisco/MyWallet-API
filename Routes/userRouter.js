@@ -1,8 +1,9 @@
 import { Router } from "express";
 
-import { signIn, signUp } from "../controllers/loginController.js";
+import { signIn, signUp, logout } from "../controllers/loginController.js";
 import { userSc, loginSc } from "../Schemas/Schemas.js";
 import { validate } from "../middlewares/validate.js";
+import { validateToken } from "../middlewares/validateToken.js";
 
 const userRouter = Router();
 
@@ -23,4 +24,4 @@ userRouter.post(
 
 userRouter.delete("/logout", validateToken, logout)
 
-export default loginRouter;
+export default userRouter;

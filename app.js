@@ -3,8 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express, { json } from "express";
 
-import userRouter from "./../Routes/userRouter.js";
-import financesRouter from "./../Routes/financesRouter.js";
+import userRouter from "./Routes/userRouter.js";
+import financesRouter from "./Routes/financesRouter.js";
 
 export const app = express();
 app.use(cors());
