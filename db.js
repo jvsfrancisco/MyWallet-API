@@ -14,3 +14,5 @@ try{
     console.log("Cannot connect", error);
 };
 export default db;
+
+
