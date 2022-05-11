@@ -6,7 +6,7 @@ import express, { json } from "express";
 import userRouter from "./../Routes/userRouter.js";
 import financesRouter from "./../Routes/financesRouter.js";
 
-const app = express();
+export const app = express();
 app.use(cors());
 app.use(json());
 
@@ -15,4 +15,6 @@ dotenv.config();
 app.use(userRouter);
 app.use(financesRouter);
 
-export default app;
+app.listen(process.env.PORT, () => {
+    console.log(chalk.green(`Server is running on port ${process.env.PORT}`));
+});
