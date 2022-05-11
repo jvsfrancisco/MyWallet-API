@@ -50,3 +50,15 @@ export async function signUp (req, res)  {
       res.sendStatus(500);
     }
   };
+
+  export async function logout(req, res){
+    const token = res.locals.token;
+
+    try{
+        await db.collection("sessions").deleteOne({token});
+        res.sendStatus(200);
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+}
