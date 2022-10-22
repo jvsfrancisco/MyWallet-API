@@ -20,7 +20,7 @@ export async function signIn (req, res) {
   
               res.status(200).send(token);
           } else {
-              res.sendStatus(401);
+              res.sendStatus(404);
           }
       } catch (erro) {
           console.log(erro);

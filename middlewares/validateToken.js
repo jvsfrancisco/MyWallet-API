@@ -18,7 +18,7 @@ export async function validateToken(req, res, next) {
             .findOne({ _id: session.userId });
 
         if (!user) {
-            res.sendStatus(404);
+            res.send(401).message("Usuário não encontrado");
             return;
         }
 
